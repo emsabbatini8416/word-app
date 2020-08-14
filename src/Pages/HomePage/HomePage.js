@@ -1,17 +1,13 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-
-import Dashboard from './Dashboard';
-import Login from './Login';
+import Wrapper from '../../Layouts/Wrapper';
+import InputForm from '../../Containers/InputForm';
 
 export function HomePage() {
-  const isLogged = useSelector(state => state.user.isLogged);
-  
-  if (isLogged) {
-    return <Dashboard />;
-  }
-
-  return <Login />;
+  return (
+    <Wrapper>
+      <InputForm />
+    </Wrapper>
+  );
 }
 
 export default HomePage;
